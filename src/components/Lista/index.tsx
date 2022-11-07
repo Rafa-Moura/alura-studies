@@ -1,24 +1,14 @@
-import React from "react";
+import tarefas from '../../api/tarefas'
 
-import './style.scss';
+import style from './Lista.module.scss';
 
 function Lista() {
-    const tarefas = [
-        {
-            tarefa: 'React',
-            tempo: '02:00:00'
-        },
-        {
-            tarefa: 'JavaScript',
-            tempo: '01:00:00'
-        }
-    ]
     return (
-        <aside className="listaTarefas">
+        <aside className={style.listaTarefas}>
             <h2>Estudos do dia</h2>
             <ul>
                 {tarefas.map((item, index) => (
-                    <li className="item" key={index}>
+                    <li className={style.item} key={index}>
                         <h3>{item.tarefa}</h3>
                         <p>{item.tempo}</p>
                     </li>
